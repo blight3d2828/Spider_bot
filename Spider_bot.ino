@@ -13,8 +13,8 @@ SoftwareSerial BT(A4, A5);
 #define EEPROM_OFFSET 2   //eeprom starting offset to store servo offset of calibration
 /* Servos --------------------------------------------------------------------*/
 //define 12 servos for 4 legs
-Servo servo[4][3];    //   front right  back right  front left   back left
-//                            m, l,  h    m, l, h    m,  l,  h    m,  l,  h
+Servo servo[4][3];    //     front right   back right   front left   back left
+// middle, leg, hip             m, l,  h     m, l, h     m,  l,  h    m,  l,  h
 const int servo_pin[4][3] = { {A2, A3, 3}, {A1, A0, 9}, {5, 4, 6}, {11, 10, 12} };
 int servo_error[4][3] = { {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0} }; // angle trim offset for servo derivation in polar_to_servo
 /* Size of the robot ---------------------------------------------------------*/
